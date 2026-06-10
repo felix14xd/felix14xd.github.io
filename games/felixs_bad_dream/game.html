@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felix's bad dream</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="styles.css">
+    
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap%27');
+	</style>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const gallery = document.querySelector('.gallery');
+            const galleryItems = document.querySelectorAll('.gallery img');
+
+            // Функция для открытия изображения
+            function setupImageClickHandler(img) {
+                img.addEventListener('click', () => {
+                    openFullImage(img.src);
+                });
+            }
+
+            // Добавляем обработчики для изначальных изображений
+            galleryItems.forEach(setupImageClickHandler);
+        });
+    </script>
+
+</head>
+<body>
+
+    <!-- Кнопка переключения языка -->
+    <div id="language-switcher">
+        <button id="language-button">
+            <img id="language-flag" src="languages/en-US.png" alt="Switch language" draggable="false">
+        </button>
+    </div>
+
+    <!-- Область страницы -->
+    <div class="container">
+        <!-- Логотип игры -->
+        <div class="logo">
+		<img id="logo-image" src="images/logo.png" alt="Felix's bad dream" data-key="images.logo">
+		</div>
+		
+        <!-- Галерея скриншотов -->
+        <div class="gallery-container">
+            <div class="gallery">
+                <img src="images/screenshots/1.png" alt="1">
+                <img src="images/screenshots/2.png" alt="2">
+                <img src="images/screenshots/3.png" alt="3">
+                <img src="images/screenshots/4.png" alt="4">
+                <img src="images/screenshots/5.png" alt="5">
+                <img src="images/screenshots/5.png" alt="5">
+                <img src="images/screenshots/6.png" alt="6">
+                <img src="images/screenshots/7.png" alt="7">
+                <img src="images/screenshots/8.png" alt="8">
+            </div>
+        </div>
+
+        <!-- Описание игры -->
+        <div class="description">
+            <h2 data-key="description.about_title"></h2>
+            <p data-key="description.about1"></p>
+            <p data-key="description.about2"></p>
+            <p data-key="description.about3"></p>
+	 
+
+        </div>
+
+<!-- Ссылки на игру -->
+<div class="game-pages-panel">
+<!-- Windows -->
+<div class="buttons-title">
+<h2 id="play_game_title" style="margin-bottom: 16px;" data-key="play_game.windows"></h2>
+</div>
+		
+<ul class="game-pages-list">
+	<li>
+                    <a href="https://store.steampowered.com/app/4004950" target="_blank" class="button-link">
+		<img class= "game-link-icon" src="../../images/platforms/steam.png">
+		<div class="game-page-link" data-key="play_game.steam_download"></div>
+                    </a>
+	</li>
+</ul>
+		
+		
+<!-- Android -->
+<!-- <div class="buttons-title"> -->
+<!-- <h2 id="play_game_title" style="margin-bottom: 16px;" data-key="play_game.android"></h2>-->
+<!-- </div> -->
+
+<!-- <ul class="game-pages-list"> -->
+	<!-- <li>
+		<!-- <a href="на_потом_когда_игра_выйдет" target="_blank" class="button-link"> -->
+		<!-- <img class= "game-link-icon" src="../../images/platforms/google_play.png"> -->
+		<!-- <div class="game-page-link" data-key="play_game.google_play_download"></div> -->
+		<!-- </a> -->
+	<!-- </li> -->
+	<!-- <li> -->
+<!-- </ul> -->
+
+
+
+</ul>
+</div>
+        <!-- Копирайт -->
+        <div class="footer-content">
+            <p>
+                <a href="https://felix_14.github.io" class="footer-link">
+                    ©Felix_14 (2025-2026)
+                </a>
+            </p>
+        </div>
+    </div>
+    <div id="fullscreen-overlay">
+        <span id="close-btn">&times;</span>
+        <button id="prev-btn" class="nav-btn">
+        <img src="images/button_left.png">
+        </button>
+        <div class="fullscreen-gallery">
+            <img id="fullscreen-image" src="" alt="Увеличенное изображение">
+        </div>
+        <button id="next-btn" class="nav-btn">
+        <img src="images/button_right.png">
+        </button>
+    </div>
+
+    <script>
+		
+		
+		
+        // Управление галереей
+        const gallery = document.querySelector('.gallery');
+        const galleryItems = document.querySelectorAll('.gallery img');
+        let currentImageIndex = 0;
+        const images = Array.from(galleryItems).map(img => img.src);
+
+        // Функция для открытия изображения в полноэкранном режиме
+        function openFullImage(src) {
+            const overlay = document.getElementById('fullscreen-overlay');
+            const fullscreenImage = document.getElementById('fullscreen-image');
+            currentImageIndex = images.indexOf(src);
+            fullscreenImage.src = src;
+            overlay.style.display = 'flex';
+        }
+
+        // Функции для навигации
+        function showNextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            document.getElementById('fullscreen-image').src = images[currentImageIndex];
+        }
+
+        function showPrevImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            document.getElementById('fullscreen-image').src = images[currentImageIndex];
+        }
+
+        // Обработчики событий
+        document.getElementById('next-btn').addEventListener('click', showNextImage);
+        document.getElementById('prev-btn').addEventListener('click', showPrevImage);
+        document.getElementById('close-btn').addEventListener('click', () => {
+            document.getElementById('fullscreen-overlay').style.display = 'none';
+        });
+
+        // Закрытие при клике вне изображения
+        document.getElementById('fullscreen-overlay').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('fullscreen-overlay')) {
+                document.getElementById('fullscreen-overlay').style.display = 'none';
+            }
+        });
+
+        // Управление с клавиатуры
+        document.addEventListener('keydown', (e) => {
+            const overlay = document.getElementById('fullscreen-overlay');
+            if (overlay.style.display === 'flex') {
+                if (e.key === 'ArrowRight') showNextImage();
+                if (e.key === 'ArrowLeft') showPrevImage();
+                if (e.key === 'Escape') overlay.style.display = 'none';
+            }
+        });
+
+        // Свайпы на мобильных устройствах
+        let touchStartX = 0;
+        let touchEndX = 0;
+        const fullscreenImage = document.getElementById('fullscreen-image');
+
+        fullscreenImage.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        fullscreenImage.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            const threshold = 50; // Минимальное расстояние свайпа
+            if (touchStartX - touchEndX > threshold) {
+                showNextImage(); // Свайп влево
+            } else if (touchEndX - touchStartX > threshold) {
+                showPrevImage(); // Свайп вправо
+            }
+        }
+    </script>
+
+    <!-- Локализация страницы -->
+    <script>
+	
+	//Язык
+    let currentLang = 'en-US'; // Язык по умолчанию
+    const supportedLanguages = ['en-US', 'ru-RU']; // Поддерживаемые языки
+    const cisLanguages = ['ru', 'ru-RU', 'uk', 'be']; // Языки СНГ (русский, украинский, белорусский)
+	
+    // Функция для загрузки JSON
+    async function loadTranslations(lang) {
+        const response = await fetch(`languages/${lang}.json`); // Загружаем JSON-файл для текущего языка
+        translations = await response.json(); // Парсим JSON
+        updateContent(); // Обновляем текст и изображение на странице
+    }
+
+    // Функция для обновления текста и изображения на странице
+    function updateContent() {
+    document.querySelectorAll('[data-key]').forEach(element => {
+        const key = element.getAttribute('data-key');
+        if (translations[key]) {
+            if (element.tagName === 'IMG') {
+			
+				const userAgent = navigator.userAgent.toLowerCase();
+				const isAndroid = userAgent.includes("android");
+
+				if (isAndroid) {
+					element.src = translations[key+'_mobile']; // Путь для Android
+				} else {
+					element.src = translations[key+'_pc']; // Путь для других устройств
+				}
+				
+				
+				//element.src = translations[key]; // Путь для других устройств
+				
+            } else {
+                element.textContent = translations[key];
+            }
+        }
+    });
+    
+    // Обновляем изображение кнопки языка
+    const flagElement = document.getElementById('language-flag');
+    flagElement.src = `languages/${currentLang}.png`;
+}
+
+    // Функция для переключения языка
+    function switchLanguage(lang) {
+        if (supportedLanguages.includes(lang)) {
+            currentLang = lang;
+            loadTranslations(currentLang); // Загружаем переводы для нового языка
+        }
+    }
+
+    // Функция для определения языка браузера
+    function detectBrowserLanguage() {
+        const browserLang = navigator.language || navigator.languages[0]; // Основной язык браузера
+
+        // Проверяем, является ли язык браузера русским или другим языком СНГ
+        if (cisLanguages.includes(browserLang)) {
+            return 'ru-RU'; // Переключаем на русский
+        }
+        return 'en-US'; // По умолчанию английский
+    }
+
+    // Инициализация языка при загрузке страницы
+    const initialLang = detectBrowserLanguage(); // Определяем язык браузера
+    switchLanguage(initialLang); // Устанавливаем язык
+
+    // Обработчик клика на кнопку
+    document.getElementById('language-button').addEventListener('click', () => {
+        const newLang = currentLang === 'ru-RU' ? 'en-US' : 'ru-RU'; // Переключаем язык
+        switchLanguage(newLang);
+    });
+	
+
+		
+</script>
+</body>
+</html>
