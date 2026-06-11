@@ -3,7 +3,7 @@
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Comfortaa Medium';
-    font-size: 30px;
+    font-size: 38px;
     font-weight: bold;
 }
 
@@ -34,6 +34,7 @@ p, .footer-content {
 }
 
 
+
 body {
     margin: 0;
     padding: 0;
@@ -43,19 +44,33 @@ body {
     align-items: center;
     background: #0A0315 url(images/background.png) no-repeat center center fixed;
     background-size: cover;
+    min-height: 100vh; /* Гарантируем, что само тело страницы не сжимается */
 }
-
 
 .container {
     width: 80%;
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 0 auto;
+    min-height: 100vh;
+    box-sizing: border-box;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(114, 92, 177, 0.3);
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.4);
+    
+    /* Изменения для контура и избавления от отступов */
+    box-shadow: none; 
+    border-left: 6px solid #796ABD;  /* Контур только слева */
+    border-right: 6px solid #796ABD; /* Контур только справа */
+    border-top: none;                /* Убираем верхнюю рамку, чтобы не было стыка */
+    border-bottom: none;             /* Убираем нижнюю рамку */
+    border-radius: 0;                /* Скругления убираем, чтобы блок сидел монолитно */
+    
+    display: flex;
+    flex-direction: column;
 }
+
+
+
 
 .game-pages-panel {
     padding-top: 10px;
