@@ -15,7 +15,7 @@ p, .footer-content {
 
 .game-page-link {
     font-family: 'Comfortaa Medium';
-    font-size: 20px;
+    font-size: 14px;
     color: white; 
     transition: color 0.15s ease-in-out;
 }
