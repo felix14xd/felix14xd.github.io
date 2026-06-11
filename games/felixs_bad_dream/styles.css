@@ -54,7 +54,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #000000;
+    background-color: #0A0315;
     background: url(background.png) no-repeat center center fixed;
     background-size: cover;
 }
@@ -71,13 +71,12 @@ body {
     background-color: rgba(114, 92, 177, 0.3);
     padding: 20px;
     
-    /* Изменения для контура и избавления от отступов */
     box-shadow: none; 
-    border-left: 6px solid #796ABD;  /* Контур только слева */
-    border-right: 6px solid #796ABD; /* Контур только справа */
-    border-top: none;                /* Убираем верхнюю рамку, чтобы не было стыка */
-    border-bottom: none;             /* Убираем нижнюю рамку */
-    border-radius: 0;                /* Скругления убираем, чтобы блок сидел монолитно */
+    border-left: 6px solid #796ABD;
+    border-right: 6px solid #796ABD;
+    border-top: none;
+    border-bottom: none;
+    border-radius: 0;
     
     display: flex;
     flex-direction: column;
