@@ -203,6 +203,17 @@ ul.custom-list {
 }
 
     ul.custom-list li::before {
+        content: "• ";
+        margin-right: 0.5em;
+        font-weight: bold;
+    }
+
+ul.custom-list {
+    list-style-type: none;
+    padding-left: 1em;
+}
+
+    ul.custom-list li::before {
         content: "·";
         margin-right: 0.5em;
         font-weight: bold;
