@@ -54,12 +54,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #0A0315 url(images/background.png) no-repeat center center fixed;
+    background-color: #000000;
+    background: url(background.png) no-repeat center center fixed;
     background-size: cover;
-    
-    /* ДОБАВЬТЕ ЭТУ СТРОКУ: */
-    overscroll-behavior: none; /* Запрещает странице «оттягиваться» и оголять черный фон */
 }
+
 
 
 .container {
