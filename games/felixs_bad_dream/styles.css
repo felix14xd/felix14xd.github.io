@@ -44,8 +44,11 @@ body {
     align-items: center;
     background: #0A0315 url(images/background.png) no-repeat center center fixed;
     background-size: cover;
-    min-height: 100vh; /* Гарантируем, что само тело страницы не сжимается */
+    
+    /* ДОБАВЬТЕ ЭТУ СТРОКУ: */
+    overscroll-behavior: none; /* Запрещает странице «оттягиваться» и оголять черный фон */
 }
+
 
 .container {
     width: 80%;
@@ -75,10 +78,14 @@ body {
 .game-pages-panel {
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(114, 92, 177, 0.5); /* Фиолетовый фон с прозрачностью 50% */
     border-radius: 10px;
-    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.4);
+    
+    /* Изменения контура: */
+    box-shadow: none; /* Полностью убрали темное размытое свечение */
+    border: 3px solid #796ABD; /* Добавили четкую фиолетовую рамку */
 }
+
 
 .background-title-gif {
     display: block;
@@ -218,17 +225,20 @@ ul.custom-list {
 .buttons-panel::before {
     content: "";
     position: absolute;
-    top: -3px;  /* Изменено с -5px на -1px */
-    left: -3px; /* Изменено с -5px на -1px */
-    right: -3px; /* Изменено с -5px на -1px */
-    bottom: -3px; /* Изменено с -5px на -1px */
-    border: 3px solid transparent; /* Изменено с 6px на 1px */
-    /* border-image: url('panel2.png') 1 fill / 1px repeat;  Изменено с 6 fill / 6px stretch */
+    top: -3px;  
+    left: -3px; 
+    right: -3px; 
+    bottom: -3px; 
+    
+    /* Изменения контура здесь: */
+    border: 8px solid #796ABD; /* Заменили transparent на фиолетовую рамку */
+    border-radius: 5px; /* Чтобы контур красиво скруглялся по углам панели */
+    
     background: transparent;
     pointer-events: none;
     z-index: 0;
     opacity: 1;
-    background-color: transparent;
+    background-color: rgba(114, 92, 177, 0.3); 
     filter: brightness(100%);
 }
 
@@ -322,23 +332,9 @@ ul.custom-list {
     margin: 10px auto;
 }
 
-    .source-code-panel::before {
-        content: "";
-    position: absolute;
-    top: -3px;  /* Изменено с -5px на -1px */
-    left: -3px; /* Изменено с -5px на -1px */
-    right: -3px; /* Изменено с -5px на -1px */
-    bottom: -3px; /* Изменено с -5px на -1px */
-    border: 3px solid transparent; /* Изменено с 6px на 1px */
-    /* border-image: url('panel2.png') 1 fill / 1px repeat; Изменено с 6 fill / 6px stretch */
-    background: transparent;
-    pointer-events: none;
-    z-index: 0;
-    opacity: 1;
-    background-color: transparent;
-    filter: brightness(100%);
-	
-    }
+.source-code-panel::before {
+    display: none !important;
+}
 
     .source-code-panel .button-icon {
         width: auto;
@@ -379,13 +375,9 @@ ul.custom-list {
         border-width: 15px;
     }
 	
-	.buttons-panel::before {
-		top: -5px;
-        left: -5px;
-        right: -5px;
-        bottom: -5px;
-        border-width: 15px;
-	}
+.buttons-panel::before {
+    display: none !important;
+}
 
 	.buttons {
 		flex-direction: column;
