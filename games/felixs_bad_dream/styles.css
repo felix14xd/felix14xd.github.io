@@ -20,26 +20,11 @@ p, .footer-content {
     transition: color 0.15s ease-in-out;
 }
 
-.music-page-link {
-    font-family: 'Comfortaa Medium';
-    font-size: 24px;
-    color: white; 
-    transition: color 0.15s ease-in-out;
-}
-
 .game-page-link:hover {
     color: white;
 }
 
-.music-page-link:hover {
-    color: white;
-}
-
 .game-page-link:active {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.music-page-link:active {
     color: rgba(255, 255, 255, 0.5);
 }
 
@@ -254,11 +239,6 @@ ul.custom-list {
 }
 
 .game-link-icon{
-    width: auto;
-    height: 32px;
-}
-
-.music-link-icon{
     width: auto;
     height: 32px;
 }
@@ -551,18 +531,9 @@ ul.custom-list {
 
 .game-link-icon {margin-right: 8px;}
 
-.music-link-icon {margin-right: 8px;}
-
 .game-pages-list {
 	list-style-type: none;
 	padding-left: 0;
 }
     .game-pages-list li { margin-bottom: 15px; }
     .game-pages-list li:last-child { margin-bottom: 0; }
-	
-.music-pages-list {
-	list-style-type: none;
-	padding-left: 0;
-}
-    .music-pages-list li { margin-bottom: 15px; }
-    .music-pages-list li:last-child { margin-bottom: 0; }
