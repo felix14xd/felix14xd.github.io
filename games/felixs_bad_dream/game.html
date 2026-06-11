@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="styles.css">
     
 	<style>
-	@import url('https://googleapis.com');
+	@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap%27');
 	</style>
     
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const gallery = document.querySelector('.gallery');
@@ -27,120 +28,151 @@
             galleryItems.forEach(setupImageClickHandler);
         });
     </script>
+
 </head>
 <body>
 
-    <!-- Главная обертка для всего контента и анимаций (включая облака) -->
-    <div id="mainWrapper">
+    <!-- Кнопка переключения языка -->
+    <div id="language-switcher">
+        <button id="language-button">
+            <img id="language-flag" src="languages/en-US.png" alt="Switch language" draggable="false">
+        </button>
+    </div>
 
-        <!-- Кнопка переключения языка -->
-        <div id="language-switcher">
-            <button id="language-button">
-                <img id="language-flag" src="languages/en-US.png" alt="Switch language" draggable="false">
-            </button>
+    <!-- Область страницы -->
+    <div class="container">
+	<!-- Логотип игры -->
+		<div class="logo">
+		<img id="logo-image" src="images/logo.png" alt="Felix's bad dream">
+		</div>
+
+		
+        <!-- Галерея скриншотов -->
+        <div class="gallery-container">
+            <div class="gallery">
+                <img src="images/screenshots/1.png" alt="1">
+                <img src="images/screenshots/2.png" alt="2">
+                <img src="images/screenshots/3.png" alt="3">
+                <img src="images/screenshots/4.png" alt="4">
+                <img src="images/screenshots/5.png" alt="5">
+                <img src="images/screenshots/5.png" alt="5">
+                <img src="images/screenshots/6.png" alt="6">
+                <img src="images/screenshots/7.png" alt="7">
+                <img src="images/screenshots/8.png" alt="8">
+            </div>
         </div>
 
-        <!-- Область страницы (главный контейнер) -->
-        <div class="container">
-            
-            <!-- Логотип игры -->
-            <div class="logo">
-                <img id="logo-image" src="images/logo.png" alt="Felix's bad dream">
-            </div>
+        <!-- Описание игры -->
+        <div class="description">
+			<!-- Гифка перед заголовком -->
+			<img src="images/background.title.gif" alt="Title" class="background-title-gif">
 
-            <!-- Галерея скриншотов -->
-            <div class="gallery-container">
-                <div class="gallery">
-                    <img src="images/screenshots/1.png" alt="1">
-                    <img src="images/screenshots/3.png" alt="3">
-                    <img src="images/screenshots/2.png" alt="2">
-                    <img src="images/screenshots/4.png" alt="4">
-                    <img src="images/screenshots/5.png" alt="5">
-                    <img src="images/screenshots/5.png" alt="5">
-                    <img src="images/screenshots/6.png" alt="6">
-                    <img src="images/screenshots/7.png" alt="7">
-                    <img src="images/screenshots/8.png" alt="8">
-                </div>
-            </div>
 
-            <!-- Описание игры -->
-            <div class="description">
-                <!-- Гифка перед заголовком -->
-                <img src="images/background.title.gif" alt="Title" class="background-title-gif">
+            <h2 data-key="description.about_title"></h2>
+            <p data-key="description.about1"></p>
+            <p data-key="description.about2"></p>
+			
+            <h2 data-key="description.features_of_the_game.title"></h2>
+            <p data-key="description.features_of_the_game1"></p>
+            <p data-key="description.features_of_the_game2"></p>
+            <p data-key="description.features_of_the_game3"></p>
+            <p data-key="description.features_of_the_game4"></p>
+            <p data-key="description.features_of_the_game5"></p>
+        </div>
 
-                <h2 data-key="description.about_title"></h2>
-                <p data-key="description.about1"></p>
-                <p data-key="description.about2"></p>
-                
-                <h2 data-key="description.features_of_the_game.title"></h2>
-                <p data-key="description.features_of_the_game1"></p>
-                <p data-key="description.features_of_the_game2"></p>
-                <p data-key="description.features_of_the_game3"></p>
-                <p data-key="description.features_of_the_game4"></p>
-                <p data-key="description.features_of_the_game5"></p>
-            </div>
 
-            <!-- Ссылки на игру -->
-            <div class="game-pages-panel">
-                <!-- Windows -->
-                <div class="buttons-title">
-                    <h2 id="play_game_title" style="margin-bottom: 16px;" data-key="play_game.windows"></h2>
-                </div>
-                
-                <ul class="game-pages-list">
-                    <li>
-                        <a href="https://steampowered.com" target="_blank" class="button-link">
-                            <img class="game-link-icon" src="../../images/platfroms/steam_white.png">
-                            <div class="game-page-link" data-key="play_game.steam_download"></div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Копирайт -->
-            <div class="footer-content">
-                <p>
-                    <a href="https://felix_14.github.io" class="footer-link">
-                        ©Felix_14 (2025-2026)
+<!-- Ссылки на игру -->
+<div class="game-pages-panel">
+<!-- Windows -->
+<div class="buttons-title">
+<h2 id="play_game_title" style="margin-bottom: 16px;" data-key="play_game.windows"></h2>
+</div>
+		
+<ul class="game-pages-list">
+	<li>
+                    <a href="https://store.steampowered.com/app/4004950" target="_blank" class="button-link">
+		<img class= "game-link-icon" src="../../images/platfroms/steam_white.png">
+		<div class="game-page-link" data-key="play_game.steam_download"></div>
                     </a>
-                </p>
+	</li>
+</ul>
+		
+		
+<!-- Android -->
+<!-- <div class="buttons-title"> -->
+<!-- <h2 id="play_game_title" style="margin-bottom: 16px;" data-key="play_game.android"></h2>-->
+<!-- </div> -->
 
-                <div class="footer-marking">
-                    <p data-key="steam.marking" style="opacity: 0.6;"></p>
-                </div>
-            </div>
+<!-- <ul class="game-pages-list"> -->
+	<!-- <li>
+		<!-- <a href="на_потом_когда_игра_выйдет" target="_blank" class="button-link"> -->
+		<!-- <img class= "game-link-icon" src="../../images/platforms/google_play.png"> -->
+		<!-- <div class="game-page-link" data-key="play_game.google_play_download"></div> -->
+		<!-- </a> -->
+	<!-- </li> -->
+	<!-- <li> -->
+<!-- </ul> -->
 
-        </div> <!-- Конец container (закрывается ПОСЛЕ футера) -->
+<!-- Listen to Music -->
+<!-- <div class="buttons-title"> -->
+<!-- <h2 id="play_game_title" style="margin-bottom: 16px;" data-key="listen_to_music.youtube_music"></h2>-->
+<!-- </div> -->
 
-        <!-- Оверлей полноэкранной галереи -->
-        <div class="fullscreen-overlay" id="fullscreen-overlay">
-            <span id="close-btn">&times;</span>
-            <button id="prev-btn" class="nav-btn">
-                <img src="images/button_left.png">
-            </button>
-            <div class="fullscreen-gallery">
-                <img id="fullscreen-image" src="" alt="Увеличенное изображение">
-            </div>
-            <button id="next-btn" class="nav-btn">
-                <img src="images/button_right.png">
-            </button>
+<!-- <ul class="game-pages-list"> -->
+	<!-- <li>
+		<!-- <a href="на_потом_когда_игра_выйдет" target="_blank" class="button-link"> -->
+		<!-- <img class= "game-link-icon" src="../../images/platforms/youtube_music.png"> -->
+		<!-- <div class="game-page-link" data-key="listen_to_music.youtube_music_listen"></div> -->
+		<!-- </a> -->
+	<!-- </li> -->
+	<!-- <li> -->
+<!-- </ul> -->
+
+
+
+</ul>
+</div>
+
+<!-- Копирайт -->
+<div class="footer-content">
+    <p>
+        <a href="https://felix_14.github.io" class="footer-link">
+            ©Felix_14 (2025-2026)
+        </a>
+    </p>
+
+    <div class="footer-marking">
+        <p data-key="steam.marking" style="opacity: 0.6;"></p>
+    </div>
+</div>
+
+
+
+    </div>
+    <div id="fullscreen-overlay">
+        <span id="close-btn">&times;</span>
+        <button id="prev-btn" class="nav-btn">
+        <img src="images/button_left.png">
+        </button>
+        <div class="fullscreen-gallery">
+            <img id="fullscreen-image" src="" alt="Увеличенное изображение">
         </div>
+        <button id="next-btn" class="nav-btn">
+        <img src="images/button_right.png">
+        </button>
+    </div>
 
-    </div> <!-- Конец mainWrapper -->
-
-
-
-    <!-- ==========================================================================
-         СКРИПТЫ
-         ========================================================================== -->
-
-    <!-- Скрипт 1: Управление галереей скриншотов -->
     <script>
+		
+		
+		
+        // Управление галереей
         const gallery = document.querySelector('.gallery');
         const galleryItems = document.querySelectorAll('.gallery img');
         let currentImageIndex = 0;
         const images = Array.from(galleryItems).map(img => img.src);
 
+        // Функция для открытия изображения в полноэкранном режиме
         function openFullImage(src) {
             const overlay = document.getElementById('fullscreen-overlay');
             const fullscreenImage = document.getElementById('fullscreen-image');
@@ -149,6 +181,7 @@
             overlay.style.display = 'flex';
         }
 
+        // Функции для навигации
         function showNextImage() {
             currentImageIndex = (currentImageIndex + 1) % images.length;
             document.getElementById('fullscreen-image').src = images[currentImageIndex];
@@ -159,18 +192,21 @@
             document.getElementById('fullscreen-image').src = images[currentImageIndex];
         }
 
+        // Обработчики событий
         document.getElementById('next-btn').addEventListener('click', showNextImage);
         document.getElementById('prev-btn').addEventListener('click', showPrevImage);
         document.getElementById('close-btn').addEventListener('click', () => {
             document.getElementById('fullscreen-overlay').style.display = 'none';
         });
 
+        // Закрытие при клике вне изображения
         document.getElementById('fullscreen-overlay').addEventListener('click', (e) => {
             if (e.target === document.getElementById('fullscreen-overlay')) {
                 document.getElementById('fullscreen-overlay').style.display = 'none';
             }
         });
 
+        // Управление с клавиатуры
         document.addEventListener('keydown', (e) => {
             const overlay = document.getElementById('fullscreen-overlay');
             if (overlay.style.display === 'flex') {
@@ -180,6 +216,7 @@
             }
         });
 
+        // Свайпы на мобильных устройствах
         let touchStartX = 0;
         let touchEndX = 0;
         const fullscreenImage = document.getElementById('fullscreen-image');
@@ -194,145 +231,91 @@
         }, { passive: true });
 
         function handleSwipe() {
-            const threshold = 50;
+            const threshold = 50; // Минимальное расстояние свайпа
             if (touchStartX - touchEndX > threshold) {
-                showNextImage();
+                showNextImage(); // Свайп влево
             } else if (touchEndX - touchStartX > threshold) {
-                showPrevImage();
+                showPrevImage(); // Свайп вправо
             }
         }
     </script>
 
-    <!-- Скрипт 2: Локализация страницы -->
+    <!-- Локализация страницы -->
     <script>
-        let translations = {}; 
-        let currentLang = 'en-US'; 
-        const supportedLanguages = ['en-US', 'ru-RU']; 
-        const cisLanguages = ['ru', 'ru-RU', 'uk', 'be']; 
-        
-        async function loadTranslations(lang) {
-            try {
-                const response = await fetch(`languages/${lang}.json`); 
-                translations = await response.json(); 
-                updateContent(); 
-            } catch (error) {
-                console.error("Файл перевода не найден:", error);
+	
+	//Язык
+    let currentLang = 'en-US'; // Язык по умолчанию
+    const supportedLanguages = ['en-US', 'ru-RU']; // Поддерживаемые языки
+    const cisLanguages = ['ru', 'ru-RU', 'uk', 'be']; // Языки СНГ (русский, украинский, белорусский)
+	
+    // Функция для загрузки JSON
+    async function loadTranslations(lang) {
+        const response = await fetch(`languages/${lang}.json`); // Загружаем JSON-файл для текущего языка
+        translations = await response.json(); // Парсим JSON
+        updateContent(); // Обновляем текст и изображение на странице
+    }
+
+    // Функция для обновления текста и изображения на странице
+    function updateContent() {
+    document.querySelectorAll('[data-key]').forEach(element => {
+        const key = element.getAttribute('data-key');
+        if (translations[key]) {
+            if (element.tagName === 'IMG') {
+			
+				const userAgent = navigator.userAgent.toLowerCase();
+				const isAndroid = userAgent.includes("android");
+
+				if (isAndroid) {
+					element.src = translations[key+'_mobile']; // Путь для Android
+				} else {
+					element.src = translations[key+'_pc']; // Путь для других устройств
+				}
+				
+				
+				//element.src = translations[key]; // Путь для других устройств
+				
+            } else {
+                element.textContent = translations[key];
             }
         }
+    });
+    
+    // Обновляем изображение кнопки языка
+    const flagElement = document.getElementById('language-flag');
+    flagElement.src = `languages/${currentLang}.png`;
+}
 
-        function updateContent() {
-            document.querySelectorAll('[data-key]').forEach(element => {
-                const key = element.getAttribute('data-key');
-                if (translations[key]) {
-                    if (element.tagName === 'IMG') {
-                        const userAgent = navigator.userAgent.toLowerCase();
-                        const isAndroid = userAgent.includes("android");
-
-                        if (isAndroid && translations[key+'_mobile']) {
-                            element.src = translations[key+'_mobile']; 
-                        } else {
-                            element.src = translations[key+'_pc'] || translations[key]; 
-                        }
-                    } else {
-                        element.textContent = translations[key];
-                    }
-                }
-            });
-            
-            const flagElement = document.getElementById('language-flag');
-            if (flagElement) {
-                flagElement.src = `languages/${currentLang}.png`;
-            }
+    // Функция для переключения языка
+    function switchLanguage(lang) {
+        if (supportedLanguages.includes(lang)) {
+            currentLang = lang;
+            loadTranslations(currentLang); // Загружаем переводы для нового языка
         }
-
-        function switchLanguage(lang) {
-            if (supportedLanguages.includes(lang)) {
-                currentLang = lang;
-                loadTranslations(currentLang); 
-            }
     }
 
     // Функция для определения языка браузера
-function detectBrowserLanguage() {
-    const browserLang = navigator.language || navigator.languages[0];
-    if (cisLanguages.includes(browserLang) || (browserLang && browserLang.startsWith('ru'))) {
-        return 'ru-RU';
+    function detectBrowserLanguage() {
+        const browserLang = navigator.language || navigator.languages[0]; // Основной язык браузера
+
+        // Проверяем, является ли язык браузера русским или другим языком СНГ
+        if (cisLanguages.includes(browserLang)) {
+            return 'ru-RU'; // Переключаем на русский
+        }
+        return 'en-US'; // По умолчанию английский
     }
-    return 'en-US';
-}
 
-const initialLang = detectBrowserLanguage();
-switchLanguage(initialLang);
+    // Инициализация языка при загрузке страницы
+    const initialLang = detectBrowserLanguage(); // Определяем язык браузера
+    switchLanguage(initialLang); // Устанавливаем язык
 
-document.getElementById('language-button').addEventListener('click', () => {
-    const newLang = currentLang === 'ru-RU' ? 'en-US' : 'ru-RU';
-    switchLanguage(newLang);
-});
-
-// Инициализируем переменную wrapper прямо перед работой
-const wrapper = document.getElementById('mainWrapper');
-
-function createCloud(init = false) {
-    if (!wrapper) return;
-    const cloud = document.createElement('div');
-    cloud.className = 'cloud';
-    
-    // Случайный выбор картинки облака от cloud1.png до cloud5.png
-    cloud.style.backgroundImage = url('images/clouds/cloud${Math.floor(Math.random()*5)+1}.png');
-    
-    const size = Math.random() * 100 + 150;
-    cloud.style.width = size + 'px';
-    cloud.style.height = (size / 2) + 'px';
-    cloud.style.top = Math.random() * 80 + 'vh';
-    cloud.style.animationDuration = (Math.random() * 20 + 30) + 's';
-    
-    if (init) cloud.style.right = Math.random() * 100 + 'vw';
-    
-    wrapper.appendChild(cloud);
-    cloud.onanimationend = () => cloud.remove();
-}
-
-// Запуск логики создания облаков после загрузки DOM
-document.addEventListener('DOMContentLoaded', () => {
-    if (wrapper) {
-        for(let i=0; i<5; i++) createCloud(true);
-        setInterval(createCloud, 5000);
-    }
-});
-
+    // Обработчик клика на кнопку
+    document.getElementById('language-button').addEventListener('click', () => {
+        const newLang = currentLang === 'ru-RU' ? 'en-US' : 'ru-RU'; // Переключаем язык
+        switchLanguage(newLang);
+    });
 	
 
 		
 </script>
-
-    <!-- Облака -->
-    <script>
-        // Находим обертку, куда будут складываться облака (в CSS у тебя #mainWrapper)
-        const wrapper = document.getElementById('mainWrapper');
-
-        function createCloud(init = false) {
-            if (!wrapper) return;
-            const cloud = document.createElement('div');
-            cloud.className = 'cloud';
-            cloud.style.backgroundImage = `url('images/clouds/cloud${Math.floor(Math.random()*5)+1}.png')`;
-            const size = Math.random() * 100 + 150;
-            cloud.style.width = size + 'px'; 
-            cloud.style.height = (size / 2) + 'px';
-            cloud.style.top = Math.random() * 80 + 'vh';
-            cloud.style.animationDuration = (Math.random() * 20 + 30) + 's';
-            if (init) cloud.style.right = Math.random() * 100 + 'vw';
-            wrapper.appendChild(cloud);
-            cloud.onanimationend = () => cloud.remove();
-        }
-
-        // Запускаем облака только после того, как DOM полностью загрузился
-        document.addEventListener('DOMContentLoaded', () => {
-            if (wrapper) {
-                for(let i=0; i<5; i++) createCloud(true);
-                setInterval(createCloud, 5000);
-            }
-        });
-    </script>
-
 </body>
 </html>

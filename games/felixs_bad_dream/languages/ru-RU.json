@@ -13,6 +13,10 @@
 	"play_game.steam_download": "Игра в Steam",
 	"play_game.android": "Играть на Android",
 	"play_game.google_play_download": "Игра на Google Play",
+	"listen_to_music.music": "Слушать музыку",
+	"listen_to_music.youtube_music_listen": "Плейлист на YouTube",
+	"listen_to_music.soundcloud_listen": "Плейлист на Souncloud",
+	"listen_to_music.steam_listen": "Купить саундтрек в Steam",
 	"steam.marking": "Название и логотип Steam являются торговыми знаками и/или зарегистрированными торговыми знаками Valve Corporation в США и других странах.",
 	"soon": "Скоро"
 }
