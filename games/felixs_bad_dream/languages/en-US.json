@@ -17,7 +17,8 @@
 	"listen_to_music.youtube_music_listen": "Listen on YouTube",
 	"listen_to_music.soundcloud_listen": "Listen on SoundCloud",
 	"listen_to_music.steam_listen": "Buy on Steam",
-	"report_of_bugs": "Report of bugs",
+	"report_of_bugs.bugs": "Report of bugs",
+	"report_of_bugs.bugs": "Report on GitHub",
 	"steam.marking": "Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.",
 	"soon": "Soon"
 }

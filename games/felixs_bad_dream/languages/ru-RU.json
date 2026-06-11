@@ -17,6 +17,8 @@
 	"listen_to_music.youtube_music_listen": "Слушать на YouTube",
 	"listen_to_music.soundcloud_listen": "Слушать на SoundCloud",
 	"listen_to_music.steam_listen": "Купить в Steam",
+	"report_of_bugs.bugs": "Сообщить о баге",
+	"report_of_bugs.github": "Сообщить на GitHub",
 	"steam.marking": "Название и логотип Steam являются торговыми знаками и/или зарегистрированными торговыми знаками Valve Corporation в США и других странах.",
 	"soon": "Скоро"
 }
