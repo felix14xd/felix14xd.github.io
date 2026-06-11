@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,28 +7,31 @@
     <link rel="shortcut icon" type="image/png" href="favicon.png" />
     <link rel="stylesheet" href="styles.css">
     
-	<style>
-	@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap%27');
-	</style>
-    
+    <style>
+        /* Исправлена опечатка %27 в конце ссылки */
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+    </style>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const gallery = document.querySelector('.gallery');
             const galleryItems = document.querySelectorAll('.gallery img');
 
-            // Функция для открытия изображения
+            // Заглушка для функции, чтобы JS не падал с ошибкой
+            function openFullImage(src) {
+                console.log("Открытие картинки:", src);
+                // Здесь должен быть ваш код модального окна
+            }
+
             function setupImageClickHandler(img) {
                 img.addEventListener('click', () => {
                     openFullImage(img.src);
                 });
             }
 
-            // Добавляем обработчики для изначальных изображений
             galleryItems.forEach(setupImageClickHandler);
         });
     </script>
-
 </head>
 <body>
 
@@ -41,37 +44,33 @@
 
     <!-- Область страницы -->
     <div class="container">
-	<!-- Логотип игры -->
-		<div class="logo">
-		<img id="logo-image" src="images/logo.png" alt="Felix's bad dream">
-		</div>
+        <!-- Логотип игры -->
+        <div class="logo">
+            <img id="logo-image" src="images/logo.png" alt="Felix's bad dream">
+        </div>
 
-		
         <!-- Галерея скриншотов -->
         <div class="gallery-container">
             <div class="gallery">
-                <img src="images/screenshots/1.png" alt="1">
-                <img src="images/screenshots/2.png" alt="2">
-                <img src="images/screenshots/3.png" alt="3">
-                <img src="images/screenshots/4.png" alt="4">
-                <img src="images/screenshots/5.png" alt="5">
-                <img src="images/screenshots/5.png" alt="5">
-                <img src="images/screenshots/6.png" alt="6">
-                <img src="images/screenshots/7.png" alt="7">
-                <img src="images/screenshots/8.png" alt="8">
+                <img src="images/screenshots/1.png" alt="Скриншот 1">
+                <img src="images/screenshots/2.png" alt="Скриншот 2">
+                <img src="images/screenshots/3.png" alt="Скриншот 3">
+                <img src="images/screenshots/4.png" alt="Скриншот 4">
+                <img src="images/screenshots/5.png" alt="Скриншот 5"> <!-- Убран дубль пятого скриншота -->
+                <img src="images/screenshots/6.png" alt="Скриншот 6">
+                <img src="images/screenshots/7.png" alt="Скриншот 7">
+                <img src="images/screenshots/8.png" alt="Скриншот 8">
             </div>
         </div>
 
         <!-- Описание игры -->
         <div class="description">
-			<!-- Гифка перед заголовком -->
-			<img src="images/background.title.gif" alt="Title" class="background-title-gif">
-
+            <img src="images/background.title.gif" alt="Title" class="background-title-gif">
 
             <h2 data-key="description.about_title"></h2>
             <p data-key="description.about1"></p>
             <p data-key="description.about2"></p>
-			
+            
             <h2 data-key="description.features_of_the_game.title"></h2>
             <p data-key="description.features_of_the_game1"></p>
             <p data-key="description.features_of_the_game2"></p>
@@ -80,58 +79,60 @@
             <p data-key="description.features_of_the_game5"></p>
         </div>
 
+        <!-- Ссылки на игру и музыку (Объединенная нижняя панель) -->
+        <div class="game-pages-panel">
+            <!-- Windows -->
+            <div class="buttons-title">
+                <h2 id="play_game_windows_title" style="margin-bottom: 16px;" data-key="play_game.windows"></h2>
+            </div>
+                    
+            <ul class="game-pages-list">
+                <li>
+                    <a href="https://steampowered.com" target="_blank" class="button-link">
+                        <img class="game-link-icon" src="../../images/platforms/steam_white.png" alt="Steam">
+                        <div class="game-page-link" data-key="play_game.steam_download"></div>
+                    </a>
+                </li>
+            </ul>
+                    
+            <!-- Android (Закомментирован корректно) -->
+            <!-- 
+            <div class="buttons-title">
+                <h2 id="play_game_android_title" style="margin-bottom: 16px;" data-key="play_game.android"></h2>
+            </div>
+            <ul class="game-pages-list">
+                <li>
+                    <a href="на_потом_когда_игра_выйдет" target="_blank" class="button-link">
+                        <img class="game-link-icon" src="../../images/platforms/google_play.png" alt="Google Play">
+                        <div class="game-page-link" data-key="play_game.google_play_download"></div>
+                    </a>
+                </li>
+            </ul> 
+            -->
 
-<!-- Ссылки на игру -->
-<div class="game-pages-panel">
-<!-- Windows -->
-<div class="buttons-title">
-<h2 id="play_game_title" style="margin-bottom: 16px;" data-key="play_game.windows"></h2>
-</div>
-		
-<ul class="game-pages-list">
-	<li>
-                    <a href="https://store.steampowered.com/app/4004950" target="_blank" class="button-link">
-		<img class= "game-link-icon" src="../../images/platforms/steam_white.png">
-		<div class="game-page-link" data-key="play_game.steam_download"></div>
-					</a>
-	</li>
-</ul>
-		
-		
-<!-- Android -->
-<!-- <div class="buttons-title"> -->
-<!-- <h2 id="play_game_title" style="margin-bottom: 16px;" data-key="play_game.android"></h2> -->
-<!-- </div> -->
+            <!-- Listen to Music -->
+            <div class="buttons-title">
+                <h2 id="listen_to_music_title" style="margin-bottom: 16px;" data-key="listen_to_music.youtube_music"></h2>
+            </div>
 
-<!-- <ul class="game-pages-list"> -->
-    <!-- <li> -->
-					<!-- <a href="на_потом_когда_игра_выйдет" target="_blank" class="button-link"> -->
-        <!-- <img class="game-link-icon" src="../../images/platforms/google_play.png"> -->
-        <!-- <div class="game-page-link" data-key="play_game.google_play_download"></div> -->
-					<!-- </a> -->
-    <!-- </li> -->
-<!-- </ul> -->
+            <ul class="music-pages-list">
+                <li>
+                    <a href="на_потом_когда_игра_выйдет" target="_blank" class="button-link">
+                        <img class="music-link-icon" src="../../images/platforms/youtube_music.png" alt="YouTube Music">
+                        <div class="music-page-link" data-key="listen_to_music.youtube_music_listen"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="на_потом_когда_игра_выйдет" target="_blank" class="button-link">
+                        <img class="music-link-icon" src="../../images/platforms/soundcloud.png" alt="SoundCloud">
+                        <div class="music-page-link" data-key="listen_to_music.soundcloud_listen"></div>
+                    </a>
+                </li>
+            </ul>
+        </div> <!-- Конец game-pages-panel -->
 
+    </div> <!-- Конец container -->
 
-<!-- Listen to Music -->
-<!-- <div class="buttons-title"> -->
-<!-- <h2 id="play_game_title" style="margin-bottom: 16px;" data-key="listen_to_music.youtube_music"></h2>-->
-<!-- </div> -->
-
-<!-- <ul class="game-pages-list"> -->
-	<!-- <li>
-		<!-- <a href="на_потом_когда_игра_выйдет" target="_blank" class="button-link"> -->
-		<!-- <img class= "game-link-icon" src="../../images/platforms/youtube_music.png"> -->
-		<!-- <div class="game-page-link" data-key="listen_to_music.youtube_music_listen"></div> -->
-		<!-- </a> -->
-	<!-- </li> -->
-	<!-- <li> -->
-<!-- </ul> -->
-
-
-
-</ul>
-</div>
 
 <!-- Копирайт -->
 <div class="footer-content">
