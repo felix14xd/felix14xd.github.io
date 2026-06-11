@@ -10,13 +10,13 @@
 	"description.features_of_the_game4": "• Dialogue with other characters, revealing details;",
 	"description.features_of_the_game5": "• Combat system if an internal conflict occurs",
 	"play_game.windows": "Play on Windows",
-	"play_game.steam_download": "Game on Steam",
+	"play_game.steam_download": "Download on Steam",
 	"play_game.android": "Play on Android",
-	"play_game.google_play_download": "Game from Google Play",
+	"play_game.google_play_download": "Download on Google Play",
 	"listen_to_music.music": "Listen to Music",
-	"listen_to_music.youtube_music_listen": "Playlist on YouTube",
-	"listen_to_music.soundcloud_listen": "Playlist on SoundCloud",
-	"listen_to_music.steam_listen": "Buy soundtrack on Steam",
+	"listen_to_music.youtube_music_listen": "Listen on YouTube",
+	"listen_to_music.soundcloud_listen": "Listen on SoundCloud",
+	"listen_to_music.steam_listen": "Buy on Steam",
 	"steam.marking": "Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.",
 	"soon": "Soon"
 }
