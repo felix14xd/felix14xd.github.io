@@ -243,22 +243,57 @@ ul.custom-list {
     height: 32px;
 }
 
-.footer-content {
-    text-align: center;
-    margin-top: 40px;      /* Отступ от панели с кнопками */
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Элегантная разделительная линия */
-    font-family: 'Tahoma', sans-serif;
+/* ======================================================== */
+/* ИСПРАВЛЕНИЕ РАЗМЕРА И СТИЛЯ КНОПОК ИГРЫ И МУЗЫКИ */
+/* ======================================================== */
+
+/* Ограничиваем размер музыкальных иконок, чтобы они не были огромными */
+.music-link-icon {
+    width: auto;
+    height: 32px;        /* Точно такая же высота, как у Steam */
+    margin-right: 8px;   /* Отступ справа до текста */
+    display: block;
 }
 
-/* Стили для текста копирайта и маркировки */
-.footer-content p, 
-.footer-marking {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-    font-size: 13px;       /* Делаем маркировку аккуратной и небольшой */
-    color: rgba(255, 255, 255, 0.4) !important; /* Приглушенный белый цвет для идеальной читаемости на темном фоне */
-    line-height: 1.5;      /* Комфортное расстояние между строками */
-    margin: 6px 0;
+/* Сбрасываем стандартные маркеры списков и центрируем элементы */
+.game-pages-list, .music-pages-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Выстраиваем кнопки в столбик */
+    align-items: center;    /* Центрируем кнопки внутри панели */
+    gap: 15px;             /* Аккуратный одинаковый отступ между кнопками */
+}
+
+/* Сбрасываем лишние нижние отступы у li, так как теперь работает gap */
+.game-pages-list li, .music-pages-list li {
+    margin-bottom: 0 !important; 
+}
+
+/* Оформляем ссылки-контейнеры, делая их полноценными кнопками */
+.game-pages-panel .button-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.05); /* Легкий темный фон под кнопкой */
+    padding: 10px 24px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    min-width: 280px; /* Одинаковая фиксированная ширина для всех кнопок */
+}
+
+/* Эффект подсвечивания кнопок при наведении */
+.game-pages-panel .button-link:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Стилизуем текст внутри музыкальных кнопок аналогично Steam */
+.music-page-link {
+    font-family: 'Comfortaa Medium', sans-serif;
+    font-size: 24px;
+    color: white;
+    transition: color 0.15s ease-in-out;
 }
 
 
