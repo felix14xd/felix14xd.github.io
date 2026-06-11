@@ -34,9 +34,13 @@ p, .footer-content {
 }
 
 
-body {
+html, body {
+    overflow-x: hidden; /* Запрещает горизонтальный скролл при анимации */
     margin: 0;
     padding: 0;
+}
+
+body {
     font-family: Tahoma;
     display: flex;
     flex-direction: column;
@@ -44,6 +48,16 @@ body {
     background: #0A0315 url(images/background.png) no-repeat center center fixed;
     background-size: cover;
 }
+
+#mainWrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    will-change: transform;
+}
+
 
 
 .container {
@@ -83,6 +97,29 @@ body {
         height: auto;
         max-width: 1400px;
     }
+
+/* Стили для анимации облаков */
+.cloud {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: -300px; /* Прячутся за правым краем экрана на старте */
+    opacity: 0.4;  /* Делаем их полупрозрачными, чтобы не перекрывали текст */
+    pointer-events: none; /* Чтобы сквозь облака можно было кликать на кнопки */
+    animation: moveCloud linear forwards;
+    z-index: 1; /* Облака будут за контентом container, если у container z-index выше */
+}
+
+@keyframes moveCloud {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-120vw); /* Плывут налево за левый край экрана */
+    }
+}
+
+
 
 .gallery-container {
     width: 99%;
@@ -485,11 +522,13 @@ ul.custom-list {
 }
 
 #language-switcher {
-    position: fixed;
+    position: fixed; /* Возвращаем fixed, теперь он будет стоять ровно */
     bottom: 30px;
     left: 30px;
     z-index: 1000;
 }
+
+
 
 #language-button {
     background: none;
