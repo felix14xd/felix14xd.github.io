@@ -15,7 +15,7 @@ p, .footer-content {
 
 .game-page-link {
     font-family: 'Comfortaa Medium';
-    font-size: 14px;
+    font-size: 20px;
     color: white; 
     transition: color 0.15s ease-in-out;
 }
@@ -198,15 +198,16 @@ h1, h2, h3, h4, h5, h6 {
 
 
 ul.custom-list {
-    list-style-type: none;
+    list-style: none;
     padding-left: 1em;
 }
 
-    ul.custom-list li::before {
-        content: "• ";
-        margin-right: 0.5em;
-        font-weight: bold;
-    }
+	ul.custom-list li::before {
+		content: "• ";
+		margin-right: 0.5em;
+		font-weight: bold;
+	}
+
 
 ul.custom-list {
     list-style-type: none;
