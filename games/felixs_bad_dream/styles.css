@@ -74,14 +74,13 @@ body {
     margin-bottom: 20px;
 }
 
-
 .logo {
     margin: 40px 0 20px 0;
 }
 
     .logo img {
         width: 45%;
-        height: 45%;
+        height: auto;
         max-width: 1400px;
     }
 
