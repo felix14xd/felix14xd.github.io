@@ -54,8 +54,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(background.png) no-repeat center center fixed; /* Сначала картинка */
-    background-color: #0A0315; /* Затем цвет (он станет фоном под картинкой) */
+    background: url(background.png) no-repeat center center fixed;
+    background-color: #0A0315
     background-size: cover;
 }
 
