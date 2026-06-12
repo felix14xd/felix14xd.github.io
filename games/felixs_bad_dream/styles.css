@@ -55,7 +55,7 @@ body {
     flex-direction: column;
     align-items: center;
     background: url(background.png) no-repeat center center fixed;
-    background-color: #0A0315
+    background-color: #0A0315;
     background-size: cover;
 }
 
