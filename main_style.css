@@ -177,17 +177,6 @@ a {
     color: #ffffff;
 }
 
-/* Фон и навигация из старого файла (сохранены без изменений) */
-.gk_head_background {
-    position: fixed;
-    width: 613px;
-    height: 935px;
-    right: -300px;
-    bottom: -500px;
-    background: url(images/gk_head.png) no-repeat;
-    opacity: 15%;
-    z-index: 0;
-}
 
 .nav_panel {
     position: fixed;
