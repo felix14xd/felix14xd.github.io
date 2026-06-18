@@ -141,7 +141,6 @@ body {
 
         .gallery img:hover {
             transform: scale(1.02);
-            /*box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);*/
         }
 
         /* Кастомный скроллбар */
@@ -202,18 +201,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 .video-container {
     width: 100%;
-    max-width: 1200px;        /* Ограничиваем ширину, чтобы плеер не был гигантским */
-    margin: 30px auto;       /* Центрируем блок и делаем отступы сверху/снизу */
+    max-width: 1200px;
+    margin: 30px auto;
     box-sizing: border-box;
-    padding: 0 10px;         /* Небольшие защитные отступы для мобильных экранов */
+    padding: 0 10px;
 }
 
 .video-container video {
     width: 100%;
-    height: auto;            /* Сохраняем родные пропорции видео */
+    height: auto;
     display: block;
-    border-radius: 12px;     /* Скругляем углы под стиль вашей панели страниц */
-    background-color: #000;  /* Черный фон пока видео загружается */
+    border-radius: 12px;
+    background-color: #000;
 }
 
 
@@ -268,9 +267,8 @@ ul.custom-list {
     right: -3px; 
     bottom: -3px; 
     
-    /* Изменения контура здесь: */
-    border: 8px solid #796ABD; /* Заменили transparent на фиолетовую рамку */
-    border-radius: 5px; /* Чтобы контур красиво скруглялся по углам панели */
+    border: 8px solid #796ABD;
+    border-radius: 5px;
     
     background: transparent;
     pointer-events: none;
