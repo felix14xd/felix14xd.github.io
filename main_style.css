@@ -92,22 +92,26 @@ p.section-title {
     margin: 25px 0;
 }
 
-/* Тизер / Дорожная карта */
-.roadmap-wrapper {
-    width: 100%;
-    margin: 15px 0;
+/* Связи */
+.contact_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
-.teaser-img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 8px;
-    transition: transform 0.2s ease;
+.contact-icon {
+    max-height: 24px;
+    width: auto;
 }
 
-.teaser-img:hover {
-    transform: scale(1.02);
+.button-text {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 600;
 }
+
 
 /* Блок с кнопками магазинов (Флекс-сетка) */
 #other_buttons {
