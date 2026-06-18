@@ -219,12 +219,13 @@ a {
 @media (max-width: 480px) {
     .card {
         padding: 1.5rem;
+        width: 100%;
     }
     h1 {
         font-size: 32px;
     }
     #other_buttons {
-        flex-direction: column; /* Кнопки встают друг под друга на смартфонах */
+        flex-direction: column;
         align-items: center;
     }
     .common_button {
@@ -232,14 +233,12 @@ a {
         max-width: unset;
     }
     #language-switcher {
-        bottom: 15px; /* Смещаем иконку ближе к краю на телефонах */
+        bottom: 15px;
         left: 15px;
     }
 }
 
-/* ==========================================
-   Переключатель языков (Language Switcher)
-   ========================================== */
+/* Переключатель языков (Language Switcher) */
 #language-switcher {
     position: fixed;
     bottom: 30px;
