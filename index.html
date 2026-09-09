@@ -34,7 +34,7 @@
 
 				<a class="common_button community-button" href="https://felix14xd.github.io/community.html" data-key="felix_14.community"></a>
 
-				<a class="common_button games-button" href="https://felix14xd.github.io/games/felixs_bad_dream/game.html" data-key="felix_14.games"></a>
+				<a class="common_button games-button" href="https://store.steampowered.com/developer/felix_14" data-key="felix_14.games"></a>
 			</div>
 
 
@@ -62,8 +62,13 @@
 
 
 			<!-- Копирайт -->
-			<div class="copyright">©Felix_14 (2023-2026)</div>
+			<div class="copyright">©Felix_14 (2023-<span id="current-year"></span>)</div>
 		</div>
+	
+	<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+	</script>
+		
 	</div>
 
 	<!-- Кнопка переключения языка -->
